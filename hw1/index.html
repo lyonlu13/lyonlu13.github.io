@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網頁程式設計作業</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+        :root {
+            --primary-color: #0099ff;
+            --secondary-color: #ff0062;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 20px;
+            font-family: Noto Sans TC;
+            font-display: swap;
+        }
+
+        .title {
+            font-size: 28px;
+        }
+
+        .title>span {
+            margin: 0;
+        }
+
+        .title>span:first-child {
+            color: white;
+            background-color: var(--primary-color);
+            padding: 5px;
+        }
+
+        .title>span:last-child {
+            color: white;
+            background-color: var(--secondary-color);
+            padding: 5px;
+        }
+
+        .input {
+            display: inline-flex;
+            padding: 5px 20px 5px 10px;
+            border: 2px solid var(--primary-color);
+            border-radius: 100px;
+            align-items: center;
+        }
+
+        .input[secondary] {
+            border: 2px solid var(--secondary-color);
+        }
+
+        .input>.material-icons {
+            color: var(--primary-color);
+            padding-right: 5px;
+        }
+
+        .input[secondary]>.material-icons {
+            color: var(--secondary-color);
+        }
+
+        .input>input {
+            outline: none;
+            border: none !important;
+            font-size: 18px;
+        }
+
+        .button {
+            outline: none;
+            border: 2px solid var(--primary-color);
+            background-color: var(--primary-color);
+            border-radius: 100px;
+            font-size: 18px;
+            padding: 5px 20px 5px 20px;
+            color: white;
+            box-shadow: 0 0 5px 0 gray;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .button[secondary] {
+            border: 2px solid var(--secondary-color);
+            background-color: var(--secondary-color);
+        }
+
+        .button[secondary]:hover {
+            background-color: white;
+            color: var(--secondary-color);
+        }
+
+        .progress-bar {
+            position: relative;
+            display: inline-block;
+            width: 300px;
+            height: 14px;
+            border: 2px solid var(--primary-color);
+            border-radius: 100px;
+        }
+
+        .progress-bar>span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            height: 14px;
+            background: var(--primary-color);
+            border-radius: 100px;
+        }
+
+        .progress-bar[secondary] {
+            border: 2px solid var(--secondary-color);
+        }
+
+        .progress-bar[secondary]>span {
+            background: var(--secondary-color);
+        }
+
+        input[type="color"] {
+            border-radius: 5px;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border: none;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="title">
+        <span>網頁程式設計</span><span>9/27作業</span>
+    </span>
+    <p>
+        不知道要放些甚麼，所以展示一些自己常用的簡易元件樣式設計。
+        <br>
+        — 409410047 呂耀承
+    </p>
+
+    <h3>文字輸入</h3>
+    <span class="input">
+        <span class="material-icons">
+            account_circle
+        </span>
+        <input type="text" placeholder="帳號">
+    </span>
+    <br>
+    <br>
+    <span class="input" secondary>
+        <span class="material-icons">
+            password
+        </span>
+        <input type="password" placeholder="密碼">
+    </span>
+    <h3>按鈕</h3>
+    <button class="button">確定</button>
+    <button class="button" secondary>取消</button>
+    <h3>進度條</h3>
+    <span class="progress-bar">
+        <span style="width:200px"></span>
+    </span>
+    <br>
+    <br>
+    <span class="progress-bar" secondary>
+        <span style="width:250px"></span>
+    </span>
+    <h3>顏色調整(會改變上面的顏色)</h3>
+    <label for="primary">
+        <input type="color" id="primary" value="#0099ff">
+        Primary
+    </label>
+    <label for="secondary">
+        <input type="color" id="secondary" value="#ff0062">
+        Secondary
+    </label>
+    <script>
+        const primary_color = document.getElementById("primary")
+        const secondary_color = document.getElementById("secondary")
+        primary_color.onchange = (e) => {
+            document.documentElement.style.setProperty('--primary-color', e.target.value);
+        }
+        secondary_color.onchange = (e) => {
+            document.documentElement.style.setProperty('--secondary-color', e.target.value);
+        }
+    </script>
+</body>
+
+</html>
