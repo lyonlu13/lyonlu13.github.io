@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            @keyframes shake {
+                0% {
+                    transform: skew(0, 0);
+                }
+
+                25% {
+                    transform: skew(5deg, 5deg);
+                }
+
+                50% {
+                    transform: skew(0deg, 0deg);
+                }
+
+                75% {
+                    transform: skew(-5deg, -5deg);
+                }
+
+                100% {
+                    transform: skew(0, 0);
+                }
+            }
+
+            h1:nth-of-type(1) {
+                text-shadow: 12px 8px 5px orange;
+                animation: shake 1s infinite;
+            }
+
+            h1:nth-of-type(2) {
+                text-shadow: 12px 8px 5px rgba(128, 128, 128, 0.43);
+                animation: shake 1s infinite;
+            }
+
+            h1:nth-of-type(3) {
+                text-shadow: 12px 8px 5px red, 12px 8px 5px blue;
+                animation: shake 1s infinite;
+            }
+
+            ul {
+                list-style: square;
+                animation: shake 1s infinite;
+            }
+
+
+            input {
+                animation: shake 1s infinite;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Hello World</h1>
+        <h1>I Have No Life</h1>
+        <h1>Test Test</h1>
+        <ul>
+            <h1>
+                <li>
+                    射鵰英雄傳
+                </li>
+            </h1>
+            <h1>
+                <li>
+                    天龍八部
+                </li>
+            </h1>
+            <h1>
+                <li>
+                    倚天屠龍記
+                </li>
+            </h1>
+
+            <input type="text">
+        </ul>
+    </body>
+
+</html>
