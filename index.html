@@ -1,109 +1,117 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lyon</title>
-    <link rel="stylesheet" href="./styles/general.css">
-    <link rel="stylesheet" href="./styles/specific.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lyon</title>
+        <link rel="stylesheet" href="./styles/general.css">
+        <link rel="stylesheet" href="./styles/specific.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
 
-<body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                Logo 一些文字
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    Logo 一些文字
+                </div>
+                <div class="navlinks">
+                    <a href="" current>主頁</a>
+                    <a href="">Blog</a>
+                    <a href="">作品展示</a>
+                    <a href="">關於我</a>
+                </div>
             </div>
-            <div class="navlinks">
-                <a href="" current>主頁</a>
-                <a href="">Blog</a>
-                <a href="">作品展示</a>
-                <a href="">關於我</a>
-            </div>
-        </div>
-        <div class="color-block-top"></div>
-        <div class="color-block-bottom"></div>
-    </header>
+            <div class="color-block-top"></div>
+            <div class="color-block-bottom"></div>
+        </header>
 
-    <div class="banner">
-        <div class="overlay">
-            <h1>Hello, I'm Lyon</h1>
-            <div class="portal-list">
-                <div class="portal" onclick="scrollToSection('section-blog')">
-                    <span class="material-icons">
-                        description
+        <div class="banner">
+            <div class="overlay">
+                <h1>Hello, I'm Lyon</h1>
+                <div class="portal-list">
+                    <div class="portal" onclick="scrollToSection('section-blog')">
+                        <span class="material-icons">
+                            description
                         </span> Blog
-                </div>
-                <div class="portal" onclick="scrollToSection('section-work')">
-                    <span class="material-icons">
-                        color_lens
+                    </div>
+                    <div class="portal" onclick="scrollToSection('section-work')">
+                        <span class="material-icons">
+                            color_lens
                         </span> 作品
-                </div>
-                <div class="portal" onclick="scrollToSection('section-me')">
-                    <span class="material-icons">
-                        person
+                    </div>
+                    <div class="portal" onclick="scrollToSection('section-me')">
+                        <span class="material-icons">
+                            person
                         </span>關於我
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="section" id="section-blog" direction="left">
-        <div class="bg"></div>
-        <div class="description">
-            <h1>Blog </h1>
-            <h2>
-                我的心路歷程
-                <br> 包含了我所有爆肝的紀錄...
-            </h2>
+        <div class="section" id="section-blog" direction="left">
+            <div class="bg"></div>
+            <div class="description">
+                <h1>Blog </h1>
+                <h2>
+                    我的心路歷程
+                    <br> 包含了我所有爆肝的紀錄...
+                </h2>
+            </div>
+            <img src="./assets/img/codeing.png" alt="">
         </div>
-        <img src="./assets/img/codeing.png" alt="">
-    </div>
-    <div class="section" id="section-work" direction="right">
-        <div class="bg"></div>
-        <img src="./assets/img/light.png" alt="">
-        <div class="description">
-            <h1>作品</h1>
-            <h2>爆肝後的結晶
-                <br> 你可能會在這裡找到一些酷東東...</h2>
+        <div class="section" id="section-work" direction="right">
+            <div class="bg"></div>
+            <img src="./assets/img/light.png" alt="">
+            <div class="description">
+                <h1>作品</h1>
+                <h2>爆肝後的結晶
+                    <br> 你可能會在這裡找到一些酷東東...
+                </h2>
+            </div>
         </div>
-    </div>
-    <div class="section" id="section-me" direction="left">
-        <div class="bg"></div>
-        <div class="description">
-            <h1>關於我</h1>
-            <h2>包含了我所有爆肝的結晶...</h2>
+        <div class="section" id="section-me" direction="left">
+            <div class="bg"></div>
+            <div class="description">
+                <h1>關於我</h1>
+                <h2>我的一些詳細資訊</h2>
+                <a class="goto" href="">前往個人資料
+                    <span class="material-icons">
+                        arrow_circle_right
+                    </span>
+                </a>
+            </div>
+            <img src="./assets/img/robot.png" alt="">
         </div>
-        <img src="./assets/img/codeing.png" alt="">
-    </div>
 
 
-    <footer class="center">
-        <div class="social-link-tray">
-            <a class="social-link" href="https://github.com/lyonlu13">
-                <img src="./assets/icon/github.svg" alt="github">
-            </a>
-            <a class="social-link" href="https://www.facebook.com/profile.php?id=100005612916964">
-                <img src="./assets/icon/fb.svg" alt="facebook">
-            </a>
-            <a class="social-link" href="https://github.com/lyonlu13">
-                <img src="./assets/icon/instagram.svg" alt="instagram">
-            </a>
+        <footer class="center">
+            <div class="social-link-tray">
+                <a class="social-link" href="https://github.com/lyonlu13">
+                    <img src="./assets/icon/github.svg" alt="github">
+                </a>
+                <a class="social-link" href="https://www.facebook.com/profile.php?id=100005612916964">
+                    <img src="./assets/icon/fb.svg" alt="facebook">
+                </a>
+                <a class="social-link" href="https://github.com/lyonlu13">
+                    <img src="./assets/icon/instagram.svg" alt="instagram">
+                </a>
+
+            </div>
+        </footer>
+        <div>
 
         </div>
-    </footer>
-
-    <script>
-        function scrollToSection(sectionID) {
-            const section = document.getElementById(sectionID);
-            scrollTo({
-                top: section.offsetTop,
-                behavior: "smooth"
-            })
-        }
-    </script>
-</body>
+        <script>
+            function scrollToSection(sectionID) {
+                const section = document.getElementById(sectionID);
+                scrollTo({
+                    top: section.offsetTop,
+                    behavior: "smooth"
+                })
+            }
+        </script>
+    </body>
 
 </html>
