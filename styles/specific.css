@@ -1,0 +1,112 @@
+header {
+    position: relative;
+    height: 80px;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 5;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar .navlinks a {
+    margin: 0 5px;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .navlinks a[current] {
+    color: #26c7fc;
+    background-color: white;
+    -webkit-clip-path: polygon(14% 24%, 0 30%, 14% 39%, 5% 55%, 12% 64%, 0 72%, 7% 85%, 100% 77%, 84% 68%, 98% 67%, 88% 52%, 100% 46%, 89% 34%, 100% 18%, 91% 8%, 0 19%);
+    clip-path: polygon(14% 24%, 0 30%, 14% 39%, 5% 55%, 12% 64%, 0 72%, 7% 85%, 100% 77%, 84% 68%, 98% 67%, 88% 52%, 100% 46%, 89% 34%, 100% 18%, 91% 8%, 0 19%);
+}
+
+footer {
+    height: 160px;
+    background-color: #1187ad;
+    color: white;
+}
+
+.social-link-tray {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    text-decoration: none;
+}
+
+.social-link>img {
+    width: 45px;
+    height: 45px;
+}
+
+.section .bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-size: 60px;
+    color: white;
+    border: 2px #1187ad solid;
+}
+
+.section>.description {
+    width: 30%;
+}
+
+.section>.description>h1 {
+    font-size: 60px;
+}
+
+.section>.description>h2 {
+    font-size: 24px;
+}
+
+.section>img {
+    max-width: 30%;
+    max-height: 60%;
+}
+
+.section[direction="left"] .bg {
+    background: linear-gradient(90deg, rgba(38, 199, 252, 1) 0%, rgba(38, 199, 252, 1) 40%, rgba(241, 252, 255, 1) 60%, rgba(255, 255, 255, 1) 100%);
+    clip-path: polygon(0 0, 55% 0, 45% 100%, 0% 100%);
+}
+
+.section[direction="right"] .bg {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(241, 252, 255, 1) 40%, rgba(38, 199, 252, 1) 60%, rgba(38, 199, 252, 1) 100%);
+    clip-path: polygon(100% 0, 45% 0, 55% 100%, 100% 100%);
+}
+
+
+/* .section[direction="left"]>img {
+    transform: translateX(40px);
+}
+
+.section[direction="right"]>img {
+    transform: translateX(-40px);
+} */
