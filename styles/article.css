@@ -1,0 +1,18 @@
+.goto {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  text-decoration: none;
+  color: #26c7fc;
+}
+
+.goto span {
+  font-size: 28px;
+  margin: 25px 0;
+}
+
+iframe {
+  width: 100%;
+  height: calc(100vh - 170px);
+}

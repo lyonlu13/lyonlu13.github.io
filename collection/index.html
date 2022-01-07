@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyon</title>
+    <link rel="stylesheet" href="/styles/general.css" />
+    <link rel="stylesheet" href="/styles/collection.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          Logo 一些文字
+        </div>
+        <div class="navlinks">
+          <a href="/">主頁</a>
+          <a href="/blog">Blog</a>
+          <a href="/collection" current>作品展示</a>
+          <a href="/about">關於我</a>
+        </div>
+      </div>
+      <div class="color-block-top"></div>
+      <div class="color-block-bottom"></div>
+    </header>
+    <h1>作品</h1>
+    <div class="title">
+      <span class="material-icons">
+        construction
+      </span>
+      工具
+    </div>
+    <div class="tray">
+      <a class="item" href="/collection/work/?auto_editor">
+        <img src="/assets/img/collection/auto_editor.png" alt="">
+        <p >Auto Editor</p>
+      </a>
+      <a class="item" href="/collection/work/?ordinary_note">
+        <img src="/assets/img/blog1.png" alt="">
+        <p >平凡筆記</p>
+      </a>
+      <a class="item" href="/collection/work/?right_the_hand">
+        <img src="/assets/img/collection/right_the_hand.png" alt="">
+        <p >在你右手邊</p>
+      </a>
+    </div>
+    <div class="title">
+      <span class="material-icons">
+        sports_esports
+      </span>
+      小遊戲
+    </div>
+    
+    <div class="tray">
+      <a class="item" href="/collection/work/?another_block">
+        <img src="/assets/img/collection/another_block.png" alt="">
+        <p >Another Block</p>
+      </a>
+      <a class="item" href="/collection/work/?somewhere">
+        <img src="/assets/img/collection/somewhere.png" alt="">
+        <p >Somewhere</p>
+      </a>
+    </div>
+    <script>
+      function scrollToSection(sectionID) {
+        const section = document.getElementById(sectionID)
+        scrollTo({
+          top: section.offsetTop,
+          behavior: 'smooth',
+        })
+      }
+    </script>
+  </body>
+</html>

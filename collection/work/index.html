@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyon</title>
+    <link rel="stylesheet" href="/styles/general.css" />
+    <link rel="stylesheet" href="/styles/collection.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          Logo 一些文字
+        </div>
+        <div class="navlinks">
+          <a href="/">主頁</a>
+          <a href="/blog" current>Blog</a>
+          <a href="/collection">作品展示</a>
+          <a href="/about">關於我</a>
+        </div>
+      </div>
+      <div class="color-block-top"></div>
+      <div class="color-block-bottom"></div>
+    </header>
+
+    <a class="goto" href="/collection">
+      <span class="material-icons">
+        arrow_circle_left
+      </span>
+      回到作品
+    </a>
+    <div class="page" id="page">
+      <div>
+        <img id="image" src="" alt="" />
+      </div>
+      <div class="split"></div>
+      <div>
+        <div class="title" style="font-size: 36px;" id="name">
+          
+        </div>
+        <p id="desc"></p>
+      </div>
+    </div>
+
+    <script>
+      firebase.initializeApp({
+        apiKey: 'AIzaSyB9qazgUtYYIrRDR1nMMxauwtHU3v_InR8',
+        authDomain: 'personal-website-bf27f.firebaseapp.com',
+        projectId: 'personal-website-bf27f',
+        storageBucket: 'personal-website-bf27f.appspot.com',
+        messagingSenderId: '610608280291',
+        appId: '1:610608280291:web:14cff6e506e3d16e150bd6',
+        measurementId: 'G-DHZCHYMG8D',
+      })
+
+      var db = firebase.firestore()
+
+      const urlSearchParams = new URLSearchParams(window.location.search)
+      const params = Object.fromEntries(urlSearchParams.entries())
+      const arr = Object.keys(params)
+      //alert(arr[0])
+
+      var docRef = db.collection('collection').doc(arr[0])
+
+      docRef
+        .get()
+        .then((doc) => {
+          if (doc.exists) {
+            document.getElementById('image').src = doc.data().img
+            document.getElementById('name').innerHTML = doc.data().name
+            document.getElementById('desc').innerHTML = doc.data().desc
+          } else {
+            console.log('No such document!')
+            failed()
+          }
+        })
+        .catch((error) => {
+          console.log('Error getting document:', error)
+          failed()
+        })
+
+      function failed() {
+        document.getElementById('page').innerHTML =
+          ' 未找到資料! <br>(全部建完有點太多了TT 期末會讀不完)'
+      }
+    </script>
+  </body>
+</html>
