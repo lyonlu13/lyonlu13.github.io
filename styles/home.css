@@ -17,10 +17,9 @@
   flex-direction: column;
 }
 
-.banner h1 {
+.banner .title {
   text-align: center;
   color: white;
-  font-size: 10vw;
 }
 
 .banner .portal-list {
@@ -142,4 +141,30 @@
   color: white;
   margin: 5px 0;
   font-size: 25px;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #26c7fc; /* The typwriter cursor */
+  border-color: transparent;
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .05em; /* Adjust as needed */
+  width: 0;
+  animation: 
+    typing 2s steps(50, end) forwards,
+    blink-caret .75s step-end infinite;
+  animation-delay: 0.5s;
+  font-size: 10vw;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #26c7fc; }
 }
