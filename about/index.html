@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyon</title>
+    <link rel="stylesheet" href="/styles/general.css" />
+    <link rel="stylesheet" href="/styles/about.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          Logo 一些文字
+        </div>
+        <div class="navlinks">
+          <a href="/">主頁</a>
+          <a href="/blog">Blog</a>
+          <a href="/work">作品展示</a>
+          <a href="/about" current>關於我</a>
+        </div>
+      </div>
+      <div class="color-block-top"></div>
+      <div class="color-block-bottom"></div>
+    </header>
+    <div class="info">
+      <div class="split">
+        <div class="left">
+          <img class="avatar" src="/assets/img/avatar.jpg" alt="" />
+          <div class="title">
+            <span class="material-icons">
+              person
+            </span>
+            個人資料
+          </div>
+          <div class="list">
+            <div class="row">姓名/Lyon</div>
+            <div class="row">
+              性別/男
+              <span class="material-icons">
+                male
+              </span>
+            </div>
+            <div class="row">職業/學生</div>
+            <div class="row">
+              <span style="color: white;">職業/</span>
+              前端打工仔
+            </div>
+            <div class="row">
+              <span style="color: white;">職業/</span>
+              麵條程式大師
+            </div>
+            <div class="row">專長/前端</div>
+            <div class="row">
+              <span style="color: white;">專長/</span>
+              應用程式
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="title">
+            <span class="material-icons">
+              code
+            </span>
+            技術能力
+          </div>
+
+          <div class="grid">
+            <div>
+              <div class="subtitle">
+                <span class="material-icons">
+                  desktop_windows
+                </span>
+                前端
+              </div>
+              <div class="item">
+                HTML
+                <div class="dexterity">▋▋▋▋▋</div>
+              </div>
+              <div class="item">
+                JavaScript
+                <div class="dexterity">▋▋▋▋▋</div>
+              </div>
+              <div class="item">
+                CSS
+                <div class="dexterity">▋▋▋▋</div>
+              </div>
+              <div class="item">
+                ↳ JSS
+                <div class="dexterity">▋▋▋▋</div>
+              </div>
+              <div class="item">
+                ↳ SASS
+                <div class="dexterity">▋▋▋</div>
+              </div>
+              <div class="item">
+                React
+                <div class="dexterity">▋▋▋▋</div>
+              </div>
+              <div class="item">
+                ↳ Next.js
+                <div class="dexterity">▋▋</div>
+              </div>
+              <div class="item">
+                Bootstrap
+                <div class="dexterity">▋▋</div>
+              </div>
+            </div>
+            <div>
+              <div class="subtitle">
+                <span class="material-icons">
+                  widgets
+                </span>
+                應用程式
+              </div>
+              <div class="item">
+                Electron
+                <div class="dexterity">▋▋▋▋</div>
+              </div>
+              <div class="item">
+                Android
+                <div class="dexterity">▋▋▋▋</div>
+              </div>
+              <div class="item">
+                ↳ Kotlin
+                <div class="dexterity">▋▋▋▋</div>
+              </div>
+              <div class="item">
+                ↳ Java
+                <div class="dexterity">▋▋▋</div>
+              </div>
+              <div class="item">
+                Windows Forms App
+                <div class="dexterity">▋▋▋</div>
+              </div>
+              <div class="item">
+                ↳ VB
+                <div class="dexterity">▋▋▋</div>
+              </div>
+              <div class="item">
+                ↳ C#
+                <div class="dexterity">▋▋</div>
+              </div>
+            </div>
+            <div>
+              <div class="subtitle">
+                <span class="material-icons">
+                  dns
+                </span>
+                後端
+              </div>
+              <div class="item">
+                Node.js
+                <div class="dexterity">▋▋▋▋▋</div>
+              </div>
+              <div class="item">
+                ↳ Express
+                <div class="dexterity">▋▋▋▋▋</div>
+              </div>
+              <div class="item">
+                PHP
+                <div class="dexterity">▋▋▋▋</div>
+              </div>
+              <div class="item">
+                Python
+                <div class="dexterity">▋▋</div>
+              </div>
+              <div class="item">
+                ↳ Flask
+                <div class="dexterity">▋</div>
+              </div>
+            </div>
+            <div>
+              <div class="subtitle">
+                <span class="material-icons">
+                  book
+                </span>
+                其他
+              </div>
+              <div class="item">
+                Firebase
+                <div class="dexterity">▋▋▋▋</div>
+              </div>
+              <div class="item">
+                MongoDB
+                <div class="dexterity">▋▋▋</div>
+              </div>
+              <div class="item">
+                SQL
+                <div class="dexterity">▋▋</div>
+              </div>
+
+              <div class="item">
+                Unity
+                <div class="dexterity">▋▋</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function scrollToSection(sectionID) {
+        const section = document.getElementById(sectionID)
+        scrollTo({
+          top: section.offsetTop,
+          behavior: 'smooth',
+        })
+      }
+    </script>
+  </body>
+</html>

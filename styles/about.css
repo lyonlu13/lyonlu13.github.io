@@ -1,0 +1,92 @@
+.info {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.split {
+  display: inline-flex;
+}
+
+.split .left {
+  padding-right: 30px;
+  border-right: dotted 5px #26c7fc;
+  flex-direction: column;
+  display: inline-flex;
+  align-items: center;
+}
+
+.split .right {
+  padding-left: 30px;
+  width: 550px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 1000px;
+}
+
+.title {
+  width: calc(100%);
+  margin-top: 10px;
+  color: #26c7fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  border-bottom: dotted 2px #26c7fc;
+}
+
+.title span {
+  font-size: 35px;
+  margin-right: 5px;
+}
+
+.subtitle {
+  width: calc(100%);
+  color: #26c7fc;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 20px;
+  border-bottom: solid 1px #26c7fc;
+}
+
+.subtitle span {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.list {
+  width: 180px;
+  text-align: left;
+}
+
+.list .row {
+  display: flex;
+  margin-top: 5px;
+  color: #26c7fc;
+  font-size: 20px;
+}
+
+.item {
+  width: 250px;
+  color: #26c7fc;
+  display: flex;
+  text-align: left;
+  font-size: 20px;
+  padding: 5px 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item .dexterity {
+  width: 50px;
+}
+
+.grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 250px 250px;
+  gap: 20px;
+}
