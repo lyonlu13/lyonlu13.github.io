@@ -56,27 +56,6 @@
   font-size: 50px;
 }
 
-footer {
-  height: 160px;
-  background-color: #1187ad;
-  color: white;
-}
-
-.social-link-tray {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social-link {
-  text-decoration: none;
-}
-
-.social-link > img {
-  width: 45px;
-  height: 45px;
-}
-
 .section .bg {
   position: absolute;
   z-index: -1;
