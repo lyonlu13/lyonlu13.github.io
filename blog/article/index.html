@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lyon</title>
+  <title>Lyon's Blog</title>
   <link rel="stylesheet" href="/styles/general.css" />
   <link rel="stylesheet" href="/styles/article.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -13,9 +13,9 @@
 <body>
   <header>
     <div class="navbar">
-      <div class="logo">
-        Logo 一些文字
-      </div>
+      <a class="logo" href="/">
+        Lyon's Blog
+      </a>
       <div class="navlinks">
         <a href="/">主頁</a>
         <a href="/blog" current>Blog</a>
@@ -54,19 +54,17 @@
       </div>
     </footer>
     <script>
+      // 獲取ID
       const urlSearchParams = new URLSearchParams(window.location.search);
       const params = Object.fromEntries(urlSearchParams.entries());
-      const arr = Object.keys(params);
-      
+      const ID = Object.keys(params)[0];
       
       var iFrame = document.getElementById("article");
-
-
       iFrame.onload = ()=>{
+        // 調整iFrame高度
         iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
       }
-
-      iFrame.src = `/blog/article/${arr[0]}`
+      iFrame.src = `/blog/article/${ID}`
 
       
     </script>

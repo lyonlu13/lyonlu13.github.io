@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lyon</title>
+    <title>Lyon's Blog</title>
     <link rel="stylesheet" href="/styles/general.css" />
     <link rel="stylesheet" href="/styles/collection.css" />
     <link
@@ -17,9 +17,9 @@
   <body>
     <header>
       <div class="navbar">
-        <div class="logo">
-          Logo 一些文字
-        </div>
+        <a class="logo"  href="/">
+          Lyon's Blog
+        </a>
         <div class="navlinks">
           <a href="/">主頁</a>
           <a href="/blog" >Blog</a>
@@ -31,13 +31,15 @@
       <div class="color-block-bottom"></div>
     </header>
 
-    <a class="goto" href="/collection">
-      <span class="material-icons">
-        arrow_circle_left
-      </span>
-      回到作品
-    </a>
-    <div class="page" id="page">
+    
+    <div class="page">
+      <a class="goto" href="/collection">
+        <span class="material-icons">
+          arrow_circle_left
+        </span>
+        回到作品
+      </a>
+    <div class="grid" id="page">
       <div>
         <img id="image" src="" alt="" />
       </div>
@@ -47,7 +49,7 @@
         <p id="desc"></p>
       </div>
     </div>
-
+  </div>
     <footer class="center">
       <div class="social-link-tray">
         <a class="social-link" target="_blank" href="https://github.com/lyonlu13">
@@ -81,7 +83,6 @@
       const urlSearchParams = new URLSearchParams(window.location.search)
       const params = Object.fromEntries(urlSearchParams.entries())
       const arr = Object.keys(params)
-      //alert(arr[0])
 
       var docRef = db.collection('collection').doc(arr[0])
 

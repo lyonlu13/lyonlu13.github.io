@@ -1,6 +1,7 @@
 .info {
   padding: 40px 0;
   text-align: center;
+  min-height: calc(100vh - 240px);
 }
 
 .split {

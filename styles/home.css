@@ -113,16 +113,30 @@
 }
 
 .description > .goto {
-  display: flex;
+  position: relative;
+  display: inline-flex;
   align-items: center;
   font-size: 26px;
   text-decoration: none;
   color: white;
+  margin: 25px 0;
 }
 
 .goto span {
   font-size: 28px;
-  margin: 25px 0;
+}
+
+.goto > .strip {
+  position: absolute;
+  width: 0;
+  transition: 0.3s;
+  height: 5px;
+  background-color: white;
+  bottom: -10px;
+}
+
+.goto:hover > .strip {
+  width: 100%;
 }
 
 .title {
@@ -145,24 +159,32 @@
 
 .typewriter h1 {
   overflow: hidden;
-  border-right: .15em solid #26c7fc; 
+  border-right: 0.15em solid #26c7fc;
   border-color: transparent;
   white-space: nowrap;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   width: 0;
-  animation: 
-    typing 2s steps(50, end) forwards,
-    blink-caret .75s step-end infinite;
+  animation: typing 2s steps(50, end) forwards,
+    blink-caret 0.75s step-end infinite;
   animation-delay: 0.5s;
   font-size: 10vw;
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #26c7fc; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #26c7fc;
+  }
 }

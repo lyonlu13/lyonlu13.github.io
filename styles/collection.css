@@ -6,13 +6,13 @@ h1 {
 
 .title {
   width: calc(100%);
-  margin-top: 10px;
   color: #26c7fc;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 25px;
   border-bottom: dotted 2px #26c7fc;
+  margin-top: 10px;
 }
 
 .title span {
@@ -92,12 +92,18 @@ h1 {
 }
 
 .page{
+  padding: 10px;
+  min-height: calc(100vh - 240px);
+}
+
+.grid{
   padding:20px;
   display: grid;
   grid-template-columns: 35% 2px 60%;
   gap:10px;
   font-size:20px;
 }
+
 
 img{
   width:100%;
